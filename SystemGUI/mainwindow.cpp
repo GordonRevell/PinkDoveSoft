@@ -42,5 +42,5 @@ void MainWindow::on_actionOptions_triggered()
 {
     OptionsDialog* d = new OptionsDialog(this);
 
-    d->show();
+    d->exec();
 }
