@@ -1,6 +1,8 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 
+#include "optionsdialog.h"
+
 #include <QTimer>
 #include <QDateTime>
 
@@ -38,4 +40,7 @@ void MainWindow::update()
 
 void MainWindow::on_actionOptions_triggered()
 {
+    OptionsDialog* d = new OptionsDialog(this);
+
+    d->show();
 }
