@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QLabel>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -15,7 +16,16 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+private slots:
+    void update();
+
+    void on_actionExit_triggered();
+
+    void on_actionOptions_triggered();
+
 private:
     Ui::MainWindow *ui;
+
+    QLabel* _timeLabel = new QLabel(this);
 };
 #endif // MAINWINDOW_H
